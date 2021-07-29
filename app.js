@@ -63,7 +63,7 @@ app.post("/failure", function(request,response){
 });
 
 
-app.listen(process.env.PORT, function() {
+app.listen(process.env.PORT || 3000, function() {
   console.log("Server detected at Port 3000");
 });
 
