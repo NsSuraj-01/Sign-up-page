@@ -6,6 +6,7 @@ const request = require("request");
 const https = require("https");
 
 const app = express();
+
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({
   extended: true
@@ -16,9 +17,10 @@ app.get("/", function(req, res) {
 });
 
 app.post("/", function(req, res) {
-  var firstname = req.body.fName;
-  var lastname = req.body.lName;
-  var eid = req.body.email;
+
+  const firstname = req.body.fName;
+  const lastname = req.body.lName;
+  const eid = req.body.email;
 
   var data = {
     members: [{
